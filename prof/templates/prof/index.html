@@ -1,0 +1,50 @@
+
+{% extends 'prof/base.html' %}
+{% load staticfiles %}
+{% block title %} Home Page {% endblock %}
+{% block content %}
+
+<p>
+	<h1>
+		Hello
+		{% if user.is_authenticated %}
+			{{ user.username }}! 
+		{% else %}
+			there!
+		{% endif %}
+	</h1>
+</p>
+
+
+{% if user.is_authenticated %}
+	
+<h2>
+	Current users of this Profile Base are: 
+</h2>
+	<ul>
+	{% for user in users %}
+  		<li>{{ user.username }}</li>
+	
+	{% endfor %}
+	</ul>
+
+<button type="submit"> <a href="accounts/logout"> Logout </a> </button>
+
+
+
+
+
+
+{% else %}
+<h2>
+	To know about people join Profile Base. 
+</h2>
+	<br>
+	<button type="submit"> <a href="accounts/login"> Login </a> </button>
+	<br>
+	<button type="submit"> <a href="accounts/signup"> Register </a> </button>
+	<br>
+
+{% endif %}
+
+{% endblock %}

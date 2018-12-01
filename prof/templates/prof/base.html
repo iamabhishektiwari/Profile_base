@@ -1,0 +1,70 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+                  /*custom font*/
+              @import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+
+              html {
+                height: 100%;
+                /*Image only BG fallback*/
+                
+                /*background = gradient + image pattern combo*/
+                background: 
+                  linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+              }
+                            h1 {
+                font-family: 'Rock Salt', cursive;
+                font-size: 60px;
+                text-align: center;
+                      }
+
+                              body {
+                                    display:flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    min-width: 400px;
+                                  }
+
+                                  footer{ 
+                                    
+                                    position:absolute; 
+                                    bottom:0; 
+                                    width:100%; 
+                                    height:100px; 
+                                  }
+  </style>
+  <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+		{% block content %}
+
+
+              <!-- WRITE YOUR CODE BETWEEN THESE TWO LINE  -->
+
+
+    {% endblock %}
+
+
+</body>
+
+
+<footer>
+         <div class="line">
+            <div class="s-12 l-6">
+               <p>Creator &copy;Abhishek Tiwari
+               </p>
+            </div>
+            <div class="s-12 l-6">
+               <p class="right">
+                  <a class="right" href="https://github.com/iamabhishektiwari" > Github_link</a>
+               </p>
+            </div>
+         </div>
+      </footer>
+
+</html>
